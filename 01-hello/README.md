@@ -5,9 +5,7 @@
 Create Hello.java, compile, and run it. Include a screenshot of the output.
 
 ## Console Output
-javac Hello.java
-java Hello
-<img width="1917" height="1007" alt="image" src="https://github.com/user-attachments/assets/123ce51c-9594-43cc-b342-3a19c2eb1677" />
+<img width="1919" height="999" alt="image" src="https://github.com/user-attachments/assets/06f4ac44-8fa6-4f11-bc8d-2bba338b070a" />
 
 
 Add README.md for 01-hello
