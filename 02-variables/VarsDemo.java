@@ -7,7 +7,15 @@ public class VarsDemo {
         char grade = 'A';
         String name = "Selenium Student";
 
-        System.out.println(count + ": " + name + " @ " + price +
-            " ready? " + isReady + " | grade=" + grade);
+        // New variables
+        int year = 2025;
+        String course = "Java Basics";
+
+        // Print summary line
+        System.out.println(
+            count + ": " + name + " @ $" + price + 
+            " ready? " + isReady + " | grade=" + grade +
+            " | year=" + year + " | course=" + course
+        );
     }
 }
