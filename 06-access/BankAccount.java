@@ -1,7 +1,7 @@
 package bankAccount;
 
 public class BankAccount {
-    private double balance = 0.0;
+    private double balance = 0.0; // private field
 
     public void deposit(double amt) {
         if (amt > 0) {
@@ -10,7 +10,8 @@ public class BankAccount {
     }
 
     public boolean withdraw(double amt) {
-        if (amt > 0 && amt <= balance) {
+        // Rule: must be >0, ≤ balance, and ≤ 80% of balance
+        if (amt > 0 && amt <= balance && amt <= balance * 0.8) {
             balance -= amt;
             return true;
         }
@@ -24,7 +25,13 @@ public class BankAccount {
     public static void main(String[] args) {
         BankAccount b = new BankAccount();
         b.deposit(100);
-        System.out.println("Balance = " + b.getBalance());
-        System.out.println("Can withdraw 50? " + b.withdraw(50));
+
+        System.out.println("Balance after deposit: " + b.getBalance());
+        System.out.println("Withdraw 50 (valid)? " + b.withdraw(50));
+        System.out.println("Balance now: " + b.getBalance());
+
+        System.out.println("Withdraw 90 (exceeds balance)? " + b.withdraw(90));
+        System.out.println("Withdraw 85 (exceeds 80% rule)? " + b.withdraw(85));
+        System.out.println("Final balance: " + b.getBalance());
     }
 }
